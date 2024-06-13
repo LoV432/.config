@@ -1,0 +1,10 @@
+export ZDOTDIR="$HOME/.config/zsh"
+export HISTFILE="$ZDOTDIR/.zhistory"
+export HISTSIZE=10000
+export SAVEHIST=10000
+export EDITOR="/usr/bin/nano"
+export VISUAL="$EDITOR"
+export CLICOLOR=1
+export FZF_DEFAULT_COMMAND='fd'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"

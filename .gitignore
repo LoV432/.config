@@ -1,0 +1,7 @@
+/*
+!.gitignore
+!fish
+fish/functions/fish_prompt.fish.bak
+!zsh
+*history
+.zcompdump
