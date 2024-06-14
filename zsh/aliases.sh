@@ -24,14 +24,15 @@ function fpr(){
 # === Docker ===
 alias d="docker"
 alias dcd="docker compose down"
-alias dcu="docker compose up"
+alias dcu="docker compose up -d"
 alias dcr="docker compose restart"
 alias dpsa="docker ps -a"
 alias dps="docker ps"
 alias dca="docker compose attach"
 alias dcsp="docker compose stop"
 alias dcst="docker compose start"
-alias dcl="docker compose logs"
+alias dcl="docker compose logs -f"
+alias dcp="docker compose pull"
 function de() {
     if [ -z "$2" ]; then
         docker exec -it $1 /bin/bash
