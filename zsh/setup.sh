@@ -31,3 +31,8 @@ if [ ! -d ~/.config/zsh/plugins/fast-syntax-highlighting ]; then
 else
   echo "fast-syntax-highlighting already installed"
 fi
+if [ ! -d ~/.config/zsh/plugins/gitstatus ]; then
+  git clone --depth=1 https://github.com/romkatv/gitstatus.git ~/.config/zsh/plugins/gitstatus
+else
+  echo "gitstatus already installed"
+fi
