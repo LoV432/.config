@@ -3,6 +3,9 @@
 !fish
 fish/functions/fish_prompt.fish.bak
 !zsh
+!tmux
 *history
 .zcompdump
 zsh/plugins
+tmux/*.log
+tmux/tmux.conf
