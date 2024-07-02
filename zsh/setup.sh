@@ -36,3 +36,8 @@ if [ ! -d ~/.config/zsh/plugins/gitstatus ]; then
 else
   echo "gitstatus already installed"
 fi
+if [ ! -d ~/.config/zsh/plugins/zsh-history-substring-search ]; then
+  git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zsh/plugins/zsh-history-substring-search
+  else
+    echo "zsh-history-substring-search already installed"
+fi
