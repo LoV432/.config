@@ -9,3 +9,4 @@ fish/functions/fish_prompt.fish.bak
 zsh/plugins
 tmux/*.log
 tmux/tmux.conf
+tmux/tmux-git
