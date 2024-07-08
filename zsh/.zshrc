@@ -1,3 +1,6 @@
+# oh-my-posh init
+eval "$(~/.config/zsh/plugins/ohmyposh/oh-my-posh init zsh --config '~.config/zsh/ohmyposh.toml')"
+
 # Aliases
 source ~/.config/zsh/aliases.sh;
 
@@ -15,17 +18,6 @@ select-word-style bash
 
 # cd to the directory without using the cd command
 setopt autocd
-
-# git status
-source ~/.config/zsh/plugins/gitstatus/gitstatus.prompt.zsh
-
-# === Prompt ===
-NEWLINE=$'\n'
-GITSTATUS=$'$GITSTATUS_PROMPT'
-NAME=$'%F{#c50f1f}L%f%F{#e74856}o%f%F{#c19c00}V%f%F{#139a0e}4%f%F{#0037da}3%f%F{#881798}2%f'
-PROMPT="${NEWLINE}%F{#139a0e}%~%f${NEWLINE}❯ "
-RPROMPT="${GITSTATUS}"
-# === /Prompt ===
 
 # fast-zsh-highlighting
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
@@ -89,7 +81,6 @@ npx() {
     npx $@
 }
 # === /NVM ===
-
 
 if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
   tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
