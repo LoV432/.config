@@ -4,9 +4,11 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
-alias ls="eza --color=auto"
-alias lsa="eza -lah --color=auto"
+alias ls="eza --icons=always --color=auto"
+alias lsa="eza --no-time --icons=always -lah --color=auto"
 alias cat="bat"
+alias space="du -sh"
+alias sudo="sudo " # This fixes "sudo <alias>" not working
 # === /General ===
 
 # === Package Manager ===
