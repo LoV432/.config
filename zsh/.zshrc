@@ -23,7 +23,7 @@ source ~/.config/zsh/plugins/gitstatus/gitstatus.prompt.zsh
 NEWLINE=$'\n'
 GITSTATUS=$'$GITSTATUS_PROMPT'
 NAME=$'%F{#c50f1f}L%f%F{#e74856}o%f%F{#c19c00}V%f%F{#139a0e}4%f%F{#0037da}3%f%F{#881798}2%f'
-PROMPT="${NEWLINE}> ${NAME} < @ %F{#139a0e}%~%f ${NEWLINE}↪ "
+PROMPT="${NEWLINE}%F{#139a0e}%~%f${NEWLINE}❯ "
 RPROMPT="${GITSTATUS}"
 # === /Prompt ===
 
