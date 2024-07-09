@@ -1,14 +1,19 @@
 #!/bin/zsh
+
 command -v git >/dev/null 2>&1 || {
   echo "git is not installed. Please install git and try again." >&2
   exit 1
 }
-if [ ! -f $(dirname "$0")/.zshenv ]; then
+if [ ! -f $(dirname ${0:A})/.zshenv ]; then
   echo "Failed to find .zshenv file."
   exit 1
 fi
 if [ ! -f ~/.zshenv ]; then
-  ln -s $(dirname "$0")/.zshenv ~/.zshenv
+  ln -s $(dirname ${0:A})/.zshenv ~/.zshenv
+fi
+
+if [ ! -d ~/.config/zsh/plugins/ ]; then
+  mkdir ~/.config/zsh/plugins/
 fi
 
 if [ ! -d ~/.config/zsh/plugins/ohmyposh ]; then
