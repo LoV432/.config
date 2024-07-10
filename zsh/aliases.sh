@@ -16,10 +16,10 @@ alias pu="sudo pacman -Syyu"
 alias pi="sudo pacman -S"
 alias pr="sudo pacman -Rsu"
 function fpi() {
-	pacman --color always -Sl | sed -e "s: :/:; /installed/d" | cut -f 1 -d " " | fzf --multi --ansi -q "$1" --preview "pacman -Si $1" | xargs -ro sudo pacman -S
+	pacman --color always -Sl | sed -e "s: :/:; /installed/d" | cut -f 1 -d " " | fzf --multi --ansi -q "$1" --preview "pacman -Si {1}" | xargs -ro sudo pacman -S
 }
 function fpr(){
-	pacman --color always -Q | cut -f 1 -d ' ' | fzf --multi --ansi -q "$1" --preview "pacman -Qi $1" | xargs -ro sudo pacman -Rns
+	pacman --color always -Q | cut -f 1 -d ' ' | fzf --multi --ansi -q "$1" --preview "pacman -Qi {1}" | xargs -ro sudo pacman -Rns
 }
 # === /Package Manager ===
 
