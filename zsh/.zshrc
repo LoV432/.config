@@ -9,8 +9,12 @@ source ~/.config/zsh/lscolors.sh;
 
 bindkey "^[[1;3C" forward-word # alt + ->
 bindkey "^[[1;3D" backward-word # alt + <-
+bindkey "^[[1;5C" forward-word # ctrl + ->
+bindkey "^[[1;5D" backward-word # ctrl + <-
 bindkey "^[[3~" delete-char # delete key
 bindkey "^[[3;3~" kill-word # alt + delete
+bindkey '^H' backward-kill-word # ctrl + backspace
+bindkey "^[[3;5~" kill-word # ctrl + delete
 
 # make alt shortcuts behave more like normal editors
 autoload -U select-word-style
@@ -19,8 +23,6 @@ select-word-style bash
 # cd to the directory without using the cd command
 setopt autocd
 
-# fast-zsh-highlighting
-source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # zsh-history-substring-search (Up and Down key searches the text you have written in shell)
 source ~/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
@@ -32,9 +34,11 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
 
+# fast-zsh-highlighting
+source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
 # === FZF ===
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source <(fzf --zsh)
 
 # add tab completion for fzf
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
