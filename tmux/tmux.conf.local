@@ -374,6 +374,10 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # this is the place to override or undo settings
 
+# split current window vertically
+unbind _
+bind ] split-window -h
+
 # increase history size
 set -g history-limit 10000
 
