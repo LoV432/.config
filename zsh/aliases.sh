@@ -5,12 +5,13 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias ls="eza --icons=always --color=auto"
-alias lsl="eza --no-time --icons=always -lah --color=auto"
+alias lsl="eza --no-time --icons=always --smart-group -lahg --color=auto"
 alias lsa="eza --no-time --icons=always -a --color=auto"
 alias cat="bat"
 alias space="du -sh"
 alias sudo="sudo " # This fixes "sudo <alias>" not working
 alias die="tmux detach -P" # Disconnects SSH when inside tmux
+alias vim="nvim"
 # === /General ===
 
 # === Package Manager ===
