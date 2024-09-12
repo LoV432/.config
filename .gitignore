@@ -4,6 +4,7 @@
 fish/functions/fish_prompt.fish.bak
 !zsh
 !tmux
+!nvim
 *history
 .zcompdump
 zsh/plugins
