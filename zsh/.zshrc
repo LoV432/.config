@@ -1,5 +1,5 @@
 # oh-my-posh init
-eval "$(~/.config/zsh/plugins/ohmyposh/oh-my-posh init zsh --config '~.config/zsh/ohmyposh.toml')"
+eval "$(~/.config/zsh/plugins/ohmyposh/oh-my-posh init zsh --config '~/.config/zsh/ohmyposh.toml')"
 
 # Aliases
 source ~/.config/zsh/aliases.sh;
@@ -26,8 +26,8 @@ setopt autocd
 
 # zsh-history-substring-search (Up and Down key searches the text you have written in shell)
 source ~/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
-bindkey '^[[A' history-substring-search-up # or '\eOA'
-bindkey '^[[B' history-substring-search-down # or '\eOB'
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 # zsh-autosuggestions

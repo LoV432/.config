@@ -1,5 +1,5 @@
 # Fix for random characters
-set -sg escape-time 10
+set -sg escape-time 50
 
 # : << EOF
 # https://github.com/gpakosz/.tmux
