@@ -4,6 +4,13 @@ eval "$(~/.config/zsh/plugins/ohmyposh/oh-my-posh init zsh --config '~/.config/z
 # Aliases
 source ~/.config/zsh/aliases.sh;
 
+# Tmux history stuff:
+# https://stackoverflow.com/questions/12247777/share-history-between-panes-windows
+setopt inc_append_history
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt share_history
+
 # ls colors
 source ~/.config/zsh/lscolors.sh;
 
