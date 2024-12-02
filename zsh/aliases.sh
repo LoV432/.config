@@ -15,7 +15,7 @@ alias vim="nvim"
 # === /General ===
 
 # === Package Manager ===
-alias pu="sudo pacman -Syyu"
+alias pu="sudo pacman -Syu"
 alias pi="sudo pacman -S"
 alias pr="sudo pacman -Rsu"
 function fpi() {
