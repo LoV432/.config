@@ -45,5 +45,12 @@ function de() {
         docker exec -it $1 $2
     fi
 }
+function dce() {
+    if [ -z "$2" ]; then
+        docker compose exec -it $1 /bin/bash
+    else
+        docker compose exec -it $1 $2
+    fi
+}
 alias lzd="lazydocker"
 # === /Docker ===
