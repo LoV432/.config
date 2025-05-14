@@ -39,15 +39,30 @@ bindkey '^[[A' history-substring-search-up # or '\eOA'
 bindkey '^[[B' history-substring-search-down # or '\eOB'
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
+
+source ~/.config/zsh/plugins/zsh-histdb/sqlite-history.zsh
+autoload -Uz add-zsh-hook
+
+_zsh_autosuggest_strategy_histdb_top_here() {
+    local query="select commands.argv from
+history left join commands on history.command_id = commands.rowid
+left join places on history.place_id = places.rowid
+where places.dir LIKE '$(sql_escape $PWD)%'
+and commands.argv LIKE '$(sql_escape $1)%'
+group by commands.argv order by count(*) desc limit 1"
+    suggestion=$(_histdb_query "$query")
+}
+
 # zsh-autosuggestions
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
+export ZSH_AUTOSUGGEST_STRATEGY=(histdb_top_here match_prev_cmd completion) 
 
 # fast-zsh-highlighting
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # === FZF ===
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # add tab completion for fzf
 source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
@@ -97,5 +112,5 @@ npx() {
 # === /NVM ===
 
 if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
-  tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+  tmux attach-session -t LoV432 || tmux new-session -s LoV432
 fi

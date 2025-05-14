@@ -53,3 +53,9 @@ if [ ! -d ~/.config/zsh/plugins/zsh-history-substring-search ]; then
 else
     echo "zsh-history-substring-search already installed"
 fi
+
+if [ ! -d ~/.config/zsh/plugins/zsh-histdb ]; then
+  git clone https://github.com/larkery/zsh-histdb ~/.config/zsh/plugins/zsh-histdb
+else
+    echo "zsh-histdb already installed"
+fi
