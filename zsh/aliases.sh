@@ -55,3 +55,22 @@ function dce() {
 }
 alias lzd="lazydocker"
 # === /Docker ===
+
+# === 7z ===
+function 7za() {
+  if [ -z "$1" ] || [ -z "$2" ]; then
+      echo "Missing Params, 7za <folder/file> <output.7z>"
+  else
+      7z a $2 $1
+  fi
+}
+function 7zx() {
+  if [ -z "$1" ]; then
+      echo "Missing Params, 7zx <input.7z> <path_to_output>"
+  elif [ -z "$2" ]; then
+      7z x $1
+  else
+      7z x $1 -o$2
+  fi
+}
+# === /7z ===
