@@ -61,7 +61,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(histdb_top_here match_prev_cmd completion)
 source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # === FZF ===
-#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source <(fzf --zsh)
 
 # add tab completion for fzf
