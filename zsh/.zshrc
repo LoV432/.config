@@ -14,6 +14,7 @@ setopt share_history
 # ls colors
 source ~/.config/zsh/lscolors.sh;
 
+bindkey -e
 bindkey "^[[1;3C" forward-word # alt + ->
 bindkey "^[[1;3D" backward-word # alt + <-
 bindkey "^[[1;5C" forward-word # ctrl + ->
