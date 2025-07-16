@@ -1,6 +1,9 @@
 # oh-my-posh init
 eval "$(~/.config/zsh/plugins/ohmyposh/oh-my-posh init zsh --config '~/.config/zsh/ohmyposh.toml')"
 
+# zoxide init (better cd)
+eval "$(zoxide init zsh --cmd cd)"
+
 # Aliases
 source ~/.config/zsh/aliases.sh;
 

@@ -7,7 +7,7 @@ alias ......="cd ../../../../.."
 alias ls="eza --icons=always --color=auto"
 alias lsl="eza --icons=always --smart-group -lahg --color=auto"
 alias lsa="eza --no-time --icons=always -a --color=auto"
-alias cat="bat"
+alias cat="bat --paging=never -p"
 alias space="du -sh"
 alias sudo="sudo " # This fixes "sudo <alias>" not working
 alias die="tmux detach -P" # Disconnects SSH when inside tmux
